@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Umbraco.Cms" Version="9.0.0-beta001" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="config\**\*.*">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+        </None>
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Remove="umbraco\**" />
+      <Compile Remove="wwwroot\umbraco\**" />
+      <Content Remove="umbraco\**" />
+      <Content Remove="wwwroot\umbraco\**" />
+      <EmbeddedResource Remove="umbraco\**" />
+      <EmbeddedResource Remove="wwwroot\umbraco\**" />
+      <None Remove="umbraco\**" />
+      <None Remove="wwwroot\umbraco\**" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\CoffeeHouse.Core\CoffeeHouse.Core.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="wwwroot\" />
+    </ItemGroup>
+
+    <!--Set this to true ModelsBuilder mode is not PureLive -->
+    <PropertyGroup>
+        <RazorCompileOnBuild>false</RazorCompileOnBuild>
+    </PropertyGroup>
+    <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+</Project>
