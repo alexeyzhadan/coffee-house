@@ -4,7 +4,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms" Version="9.0.0-beta001" />
+        <PackageReference Include="Umbraco.Cms" Version="9.0.0-rc001" />
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.0.0-rc001" />
+        <PackageReference Include="uSync" Version="9.0.0-rc001" />
     </ItemGroup>
     <ItemGroup>
         <None Include="config\**\*.*">
@@ -13,12 +15,16 @@
         </None>
     </ItemGroup>
     <ItemGroup>
+      <Compile Remove="App_Plugins\**" />
       <Compile Remove="umbraco\**" />
       <Compile Remove="wwwroot\umbraco\**" />
+      <Content Remove="App_Plugins\**" />
       <Content Remove="umbraco\**" />
       <Content Remove="wwwroot\umbraco\**" />
+      <EmbeddedResource Remove="App_Plugins\**" />
       <EmbeddedResource Remove="umbraco\**" />
       <EmbeddedResource Remove="wwwroot\umbraco\**" />
+      <None Remove="App_Plugins\**" />
       <None Remove="umbraco\**" />
       <None Remove="wwwroot\umbraco\**" />
     </ItemGroup>
