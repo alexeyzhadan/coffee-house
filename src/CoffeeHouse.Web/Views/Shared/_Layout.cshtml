@@ -1,0 +1,14 @@
+﻿@using System.Threading
+@model CoffeeHouse.Core.Features.Shared.Models.BasePageModel
+
+<!doctype html>
+<html lang="@Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName">
+<head>
+    <partial name="_Meta" for="@Model">
+</head>
+<body>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>

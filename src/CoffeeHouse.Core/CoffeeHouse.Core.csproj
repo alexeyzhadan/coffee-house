@@ -4,4 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Core" Version="9.0.0-rc001" />
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="9.0.0-rc001" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.0.0-rc001" />
+  </ItemGroup>
+
 </Project>

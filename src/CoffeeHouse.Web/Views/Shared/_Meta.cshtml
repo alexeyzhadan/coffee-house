@@ -1,0 +1,35 @@
+﻿@model CoffeeHouse.Core.Features.Shared.Models.ISeo
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+@if (!string.IsNullOrWhiteSpace(Model.PageTitle) && !string.IsNullOrWhiteSpace(Model.SiteName))
+{
+    <title>@Model.PageTitle - @Model.SiteName</title>
+}
+else if (!string.IsNullOrWhiteSpace(Model.SiteName))
+{
+    <title>@Model.SiteName</title>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.MetaDescription))
+{
+    <meta name="description" content="@Model.MetaDescription">
+}
+@if (!string.IsNullOrWhiteSpace(Model.OgTitle))
+{
+    <meta property="og:title" content="@Model.OgTitle">
+}
+@if (!string.IsNullOrWhiteSpace(Model.OgDescription))
+{
+    <meta property="og:description" content="@Model.OgDescription">
+}
+@if (Model.OgImage != null)
+{
+    <meta property="og:image" content="@Model.OgImage.Url(mode: Umbraco.Cms.Core.Models.PublishedContent.UrlMode.Absolute)">
+}
+@if (!string.IsNullOrWhiteSpace(Model.OgUrl))
+{ 
+    <meta property="og:url" content="@Model.OgUrl"/>
+}
