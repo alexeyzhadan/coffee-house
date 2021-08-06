@@ -362,5 +362,5 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-**/umbraco/
-**/App_Plugins/
+/src/CoffeeHouse.Web/umbraco/Data
+/src/CoffeeHouse.Web/umbraco/mediacache

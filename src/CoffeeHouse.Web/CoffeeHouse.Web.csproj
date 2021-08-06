@@ -15,24 +15,10 @@
         </None>
     </ItemGroup>
     <ItemGroup>
-      <Compile Remove="App_Plugins\**" />
-      <Compile Remove="umbraco\**" />
-      <Compile Remove="wwwroot\umbraco\**" />
-      <Content Remove="App_Plugins\**" />
-      <Content Remove="umbraco\**" />
-      <Content Remove="wwwroot\umbraco\**" />
-      <EmbeddedResource Remove="App_Plugins\**" />
-      <EmbeddedResource Remove="umbraco\**" />
-      <EmbeddedResource Remove="wwwroot\umbraco\**" />
-      <None Remove="App_Plugins\**" />
-      <None Remove="umbraco\**" />
-      <None Remove="wwwroot\umbraco\**" />
-    </ItemGroup>
-    <ItemGroup>
       <ProjectReference Include="..\CoffeeHouse.Core\CoffeeHouse.Core.csproj" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="wwwroot\" />
+      <Folder Include="uSync\v9\ContentTypes\" />
     </ItemGroup>
 
     <!--Set this to true ModelsBuilder mode is not PureLive -->
