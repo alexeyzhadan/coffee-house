@@ -4,11 +4,13 @@
 <!doctype html>
 <html lang="@Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName">
 <head>
-    <partial name="_Meta" for="@Model">
+    <partial name="/Views/Shared/_Meta.cshtml" for="@Model" />
 </head>
 <body>
+    <partial name="/Views/Shared/_Header.cshtml" for="Header" />
     <main>
         @RenderBody()
     </main>
+    <partial name="/Views/Shared/Footer/_Footer.cshtml" for="Footer" />
 </body>
 </html>

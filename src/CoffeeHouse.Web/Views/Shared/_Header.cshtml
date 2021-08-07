@@ -1,0 +1,15 @@
+﻿@model CoffeeHouse.Core.Features.Shared.Models.HeaderViewModel
+
+<header>
+    @if (!string.IsNullOrWhiteSpace(Model.LogoTitle))
+    {
+        @Html.Raw(Model.LogoTitle)
+    }
+    @if (Model.NavigationItems?.Any() == true)
+    {
+        foreach (var item in Model.NavigationItems)
+        {
+            <a href="@item.Url()">@item.Name</a>
+        }
+    }
+</header>

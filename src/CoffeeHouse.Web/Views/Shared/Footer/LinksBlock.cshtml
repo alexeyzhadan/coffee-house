@@ -1,0 +1,20 @@
+﻿@using CoffeeHouse.Core.Features.Shared.Models.Footer;
+@model IFooterBlock
+@{
+    var model = Model as LinksBlock;
+}
+
+@if (model != null)
+{
+    if (!string.IsNullOrWhiteSpace(model.Title))
+    {
+        <span>@(model.Title)</span>
+    }
+    if (model.Links?.Any() == true)
+    {
+        foreach (var link in model.Links)
+        { 
+            <a href="@link.Url">@link.Name</a>
+        }
+    }
+}

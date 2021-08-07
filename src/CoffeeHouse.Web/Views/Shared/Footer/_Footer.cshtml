@@ -1,0 +1,15 @@
+﻿@model CoffeeHouse.Core.Features.Shared.Models.Footer.FooterViewModel
+
+<footer>
+    @if (!string.IsNullOrWhiteSpace(Model.CopyrightText))
+    {
+        @Html.Raw(Model.CopyrightText)
+    }
+    @if (Model.Blocks?.Any() == true)
+    {
+        foreach (var block in Model.Blocks)
+        { 
+            <partial name="@($"/Views/Shared/Footer/{block.PartialName}.cshtml")" for="@block" />
+        }
+    }
+</footer> 

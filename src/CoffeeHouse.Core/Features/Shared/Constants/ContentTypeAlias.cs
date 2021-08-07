@@ -2,6 +2,14 @@
 {
     public static class ContentTypeAlias
     {
-        public const string SiteSettings = "siteSettings";    
+        #region Pages
+        public const string SiteSettings = "siteSettings";
+        #endregion
+
+        #region Elements
+        public const string ContactBlock = "contactBlock";
+        public const string SubscribeBlock = "subscribeBlock";
+        public const string LinksBlock = "linksBlock";
+        #endregion
     }
 }

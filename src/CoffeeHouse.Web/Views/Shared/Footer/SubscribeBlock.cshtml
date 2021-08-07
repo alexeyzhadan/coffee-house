@@ -1,0 +1,18 @@
+﻿@using CoffeeHouse.Core.Features.Shared.Models.Footer;
+@model IFooterBlock
+@{
+    var model = Model as SubscribeBlock;
+}
+
+@if (model != null)
+{
+    if (!string.IsNullOrWhiteSpace(model.Title))
+    {
+        <span>@(model.Title)</span>
+    }
+    <input placeholder="@(model.EmailPlaceholder)" />
+    if (!string.IsNullOrWhiteSpace(model.SubscribeLabel))
+    {
+        <button>@(model.SubscribeLabel)</button>
+    }
+}

@@ -1,9 +1,13 @@
-﻿using Umbraco.Cms.Core.Models.PublishedContent;
+﻿using CoffeeHouse.Core.Features.Shared.Models.Footer;
+using Umbraco.Cms.Core.Models.PublishedContent;
 
 namespace CoffeeHouse.Core.Features.Shared.Models
 {
     public class BasePageModel : ISeo
     {
+        public HeaderViewModel Header { get; set; }
+        public FooterViewModel Footer { get; set; }
+
         public string SiteName { get; set; }
         public string PageTitle { get; set; }
         public string MetaDescription { get; set; }

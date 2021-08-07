@@ -1,0 +1,34 @@
+﻿@using CoffeeHouse.Core.Features.Shared.Constants
+@using CoffeeHouse.Core.Features.Shared.Models.Footer;
+@model IFooterBlock
+@{
+    var model = Model as ContactBlock;
+}
+
+@if (model != null)
+{
+    if (!string.IsNullOrWhiteSpace(model.Title))
+    {
+        <span>@(model.Title)</span>
+    }
+    if (!string.IsNullOrWhiteSpace(model.Text))
+    {
+        @Html.Raw(model.Text)
+    }
+    if (model.SocialLinks?.Any() == true)
+    {
+        foreach (var socialLink in model.SocialLinks)
+        {
+            if (socialLink.Link != null)
+            {
+                <a href="@socialLink.Link.Url">
+                    @if (socialLink.Logo != null)
+                    { 
+                        <img src="@socialLink.Logo.Url()"
+                             alt="@(socialLink.Logo.Value<string>(PropertyAlias.AlternativeText))"/>
+                    }
+                </a>
+            }
+        }
+    }
+}
